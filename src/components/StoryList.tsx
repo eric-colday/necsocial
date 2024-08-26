@@ -7,8 +7,9 @@ import Image from "next/image";
 import { useOptimistic, useState } from "react";
 import { Story, User } from "../../prisma/generated/client";
 
-type StoryWithUser = Story & {
+type StoryWithUser = Story & {  
   user: User;
+  
 };
 
 const StoryList = ({
