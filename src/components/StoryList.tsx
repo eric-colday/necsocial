@@ -3,13 +3,12 @@
 import { addStory } from "@/lib/actions";
 import { useUser } from "@clerk/nextjs";
 import { CldUploadWidget } from "next-cloudinary";
+import { Story, User } from "@prisma/client";
 import Image from "next/image";
 import { useOptimistic, useState } from "react";
-import { Story, User } from "../../prisma/generated/client";
 
-type StoryWithUser = Story & {  
+type StoryWithUser = Story & {
   user: User;
-  
 };
 
 const StoryList = ({
